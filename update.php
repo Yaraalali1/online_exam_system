@@ -11,7 +11,7 @@ header("location:dash.php?q=3");
 }
 }
 
-//delete user
+
 if(isset($_SESSION['key'])){
 if(@$_GET['demail'] && $_SESSION['key']=='sunny7785068889') {
 $demail=@$_GET['demail'];
@@ -21,7 +21,7 @@ $result = mysqli_query($con,"DELETE FROM user WHERE email='$demail' ") or die('E
 header("location:dash.php?q=1");
 }
 }
-//remove quiz
+
 if(isset($_SESSION['key'])){
 if(@$_GET['q']== 'rmquiz' && $_SESSION['key']=='sunny7785068889') {
 $eid=@$_GET['eid'];
@@ -39,7 +39,7 @@ header("location:dash.php?q=5");
 }
 }
 
-//add quiz
+
 if(isset($_SESSION['key'])){
 if(@$_GET['q']== 'addquiz' && $_SESSION['key']=='sunny7785068889') {
 $name = $_POST['name'];
@@ -57,7 +57,7 @@ header("location:dash.php?q=4&step=2&eid=$id&n=$total");
 }
 }
 
-//add question
+
 if(isset($_SESSION['key'])){
 if(@$_GET['q']== 'addqns' && $_SESSION['key']=='sunny7785068889') {
 $n=@$_GET['n'];
@@ -200,7 +200,7 @@ header("location:account.php?q=result&eid=$eid");
 }
 }
 
-//restart quiz
+
 if(@$_GET['q']== 'quizre' && @$_GET['step']== 25 ) {
 $eid=@$_GET['eid'];
 $n=@$_GET['n'];
