@@ -18,7 +18,7 @@ $email = addslashes($email);
 $college = stripslashes($college);
 $college = addslashes($college);
 $mob = stripslashes($mob);
-$mob = addslashes($mob);
+$mob = addslashes($mob)
 
 $password = stripslashes($password);
 $password = addslashes($password);
